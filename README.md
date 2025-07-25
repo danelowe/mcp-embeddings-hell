@@ -8,6 +8,8 @@
 
 ![Initial Prompt](./initial_prompt.png)
 
+(I'm specifically trying to avoid making assumptions about the target audience here)
+
 ---
 
 ## What is MCP (Model Context Protocol)?
@@ -35,8 +37,6 @@ MCP changes all of this by letting your AI assistant actually connect to and int
 
 ## MCP Architecture: The Bridge Between Worlds
 *"How your AI escapes its digital coffin"*
-
-![MCP Flow](./mcp_flow.svg)
 
 ```mermaid
 ---
@@ -79,6 +79,31 @@ flowchart TB
 - **Security layers** - each connection type uses appropriate authentication (OAuth, API keys, etc.)
 
 Think of MCP as the universal translator that turns your AI from an isolated hermit named Petyr into a well-connected digital vampire with access to everything in your digital realm.
+
+---
+
+## Visualised another way
+
+![MCP USB Hub](./mcp-usb-c.webp)
+
+- Claude app on your laptop is the MCP client. 
+- Claude's service is off in the cloud.
+- MCP protocol is like a USB hub that connects your local Claude client to your MCP servers.
+- MCP servers are like USB devices plugged into the hub.
+  (They connect to your Claude client, not to Claude's backend service directly)
+
+## My Current Dev MCP Servers
+
+- **Browser Tools / Playwright** - What I have selected in my browser. Take screenshots, compare to design, etc.
+- **Figma Dev Mode** - Pull out symbols and styles from design and compare to implementation, match to design system components.
+- **Memory Bank** - Keep semantically searchable context across sessions
+- **Knowledge Base** - Dev docs
+- **Linear** - Check ticket details
+- **Postgres** -  Schema, queries
+- **Serena** - Checklist workflows, code search, etc.
+- **RubyMine/JetBrains** - Open files, selection, edit current non-file buffer
+- **Pandoc** - Convert files.
+- **Screenshot**
 
 ---
 
@@ -291,6 +316,9 @@ Getting something good is probably a lot harder than you think.
 
 ![The Chasm](./the_chasm_2.png)
 
+> [!NOTE]
+> This was especially true for my first AI-related project, which was in the medical domain.
+
 ### The Great Divide: When Developers and Domain Experts Can't See Eye to Eye
 *"Like vampires and werewolves trying to plan a dinner party"*
 
@@ -303,6 +331,8 @@ After some degree of AI project carnage, I've discovered (multiple times) the mo
 **The Problem?** 
 The domain experts need to be able to experiment with AI capabilities, but don't have the right tools.
 The developers are eager to build something great, but can't judge the results.
+
+Fun side exercise: Try asking a developer to '_just_ get _better_ results', and watch the reaction.
 
 ### Let's just keep it visual
 
